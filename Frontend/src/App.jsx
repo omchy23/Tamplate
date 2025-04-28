@@ -16,7 +16,7 @@ const App = () => {
 
   const fetchTemplates = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8767/api/v1/templates');
+      const { data } = await axios.get('https://tamplate.onrender.com/api/v1/templates');
       setTemplates(data.templates);
     } catch (error) {
       console.error(error);
@@ -25,7 +25,7 @@ const App = () => {
 
   const fetchCategories = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8767/api/v1/getCategory');
+      const { data } = await axios.get('https://tamplate.onrender.com/api/v1/getCategory');
       setCategories(data.categories);
     } catch (error) {
       console.error(error);

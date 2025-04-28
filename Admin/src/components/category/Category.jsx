@@ -7,7 +7,7 @@ const AddCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-     await axios.post('http://localhost:8767/api/v1/add', { name });
+     await axios.post('https://tamplate.onrender.com/api/v1/add', { name });
       
       alert('Category added successfully');
       setName('');

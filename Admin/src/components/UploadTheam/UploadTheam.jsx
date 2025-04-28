@@ -9,7 +9,7 @@ const UploadTemplate = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8767/api/v1/getCategory');
+        const { data } = await axios.get('https://tamplate.onrender.com/api/v1/getCategory');
         setCategories(data.categories);
       } catch (error) {
         console.error(error);
@@ -21,7 +21,7 @@ const UploadTemplate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8767/api/v1/templates', {
+      await axios.post('https://tamplate.onrender.com/api/v1/templates', {
         category: selectedCategory,
         link:templateLink,
       });
